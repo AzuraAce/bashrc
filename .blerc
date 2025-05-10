@@ -1,0 +1,47 @@
+# ~/.blerc
+
+source /usr/share/bash-completion/bash_completion
+
+ble-import -d integration/fzf-completion
+ble-import -d integration/fzf-key-bindings
+
+### Colors
+ble-face -s auto_complete       fg=242,bg=none
+
+ble-face -s filename_directory  fg=white,bg=none
+ble-face -s region_insert       fg=white,bg=none
+
+ble-face -s region              fg=none,bg=none,reverse
+ble-face -s syntax_error        fg=160,bg=none
+
+### Performance Tuning
+
+# Filename highlighting
+bleopt highlight_timeout_async=5000
+bleopt highlight_timeout_sync=50
+bleopt highlight_eval_word_limit=200
+
+# Completions performed in background
+bleopt complete_auto_complete=
+bleopt complete_menu_filter=
+bleopt complete_auto_menu=
+bleopt complete_auto_history=
+
+# bleopt complete_auto_delay=500
+# bleopt complete_auto_menu=500
+#
+# bleopt complete_limit_auto=2000
+# bleopt complete_limit_auto_menu=100
+# bleopt complete_timeout_auto=5000
+# bleopt complete_timeout_compvar=200
+# bleopt complete_polling_cycle=50
+
+# Limit the menu height
+bleopt complete_menu_maxlines=10
+
+# Use a simple layout for the menu
+# bleopt complete_menu_style=dense
+
+# History
+# History sharing
+bleopt history_share=1
