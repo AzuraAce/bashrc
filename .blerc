@@ -5,6 +5,9 @@ source /usr/share/bash-completion/bash_completion
 ble-import -d integration/fzf-completion
 ble-import -d integration/fzf-key-bindings
 
+# Disable error exit marker like "[ble: exit %d]"
+bleopt exec_errexit_mark=
+
 ### Colors
 ble-face -s auto_complete       fg=242,bg=none
 
